@@ -11,5 +11,5 @@ The current maintainers (people who can merge pull requests) are:
   
 ## Participation
 
-The catz-cradle project supports the [Typelevel Code of Conduct](http://typelevel.org/conduct.html) and wants all of its
+The sbt-tls-crossproject project supports the [Typelevel Code of Conduct](http://typelevel.org/conduct.html) and wants all of its
 channels (mailing list, Gitter, IRC, github, etc.) to be welcoming environments for everyone.
