@@ -31,3 +31,29 @@ trait TlsJvmCrossProject {
       project.configurePlatform(TlsJvmPlatform)(transformer)
   }
 }
+
+case object TlsJvm1Platform extends Platform {
+  def identifier: String                = "tlsJvm1"
+  def sbtSuffix: String                 = "TlsJvm1"
+  def enable(project: Project): Project = project.enablePlugins(TlsJvm1Plugin)
+  val crossBinary: CrossVersion         = CrossVersion.binary
+  val crossFull: CrossVersion           = CrossVersion.full
+}
+
+trait TlsJvm1CrossProject {
+  val TlsJvm1Platform = sbtplugin.TlsJvm1Platform
+
+  implicit def TlsJvm1CrossProjectBuilderOps(
+                                             builder: CrossProject.Builder): TlsJvm1CrossProjectOps =
+    new TlsJvm1CrossProjectOps(builder.crossType(CrossType.Full))
+
+  implicit class TlsJvm1CrossProjectOps(project: CrossProject) {
+    def tlsJvm1: Project = project.projects(TlsJvm1Platform)
+
+    def tlsJvm1Settings(ss: Def.SettingsDefinition*): CrossProject =
+      tlsJvm1Configure(_.settings(ss: _*))
+
+    def tlsJvm1Configure(transformer: Project => Project): CrossProject =
+      project.configurePlatform(TlsJvm1Platform)(transformer)
+  }
+}

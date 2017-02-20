@@ -17,6 +17,17 @@ object TlsJvmPlugin extends AutoPlugin {
   )
 }
 
+object TlsJvm1Plugin extends AutoPlugin {
+  override def requires: Plugins = plugins.JvmPlugin
 
+  val autoImport = AutoImport
+
+  object AutoImport extends TlsJvm1CrossProject
+
+  override def projectSettings: Seq[Setting[_]] =Seq(
+    crossPlatform := TlsJvm1Platform,
+    Keys.scalaOrganization := "org.typelevel"
+  )
+}
 
 
