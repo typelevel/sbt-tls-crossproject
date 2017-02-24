@@ -11,7 +11,7 @@ case object TlsJvmPlatform extends Platform {
   def sbtSuffix: String                 = "TlsJvm"
   def enable(project: Project): Project = project.enablePlugins(TlsJvmPlugin)
   val crossBinary: CrossVersion         = CrossVersion.binary
-  val crossFull: CrossVersion           = CrossVersion.full
+  val crossFull: CrossVersion           = CrossVersion.patch
 }
 
 trait TlsJvmCrossProject {
@@ -37,7 +37,7 @@ case object TlsJvm1Platform extends Platform {
   def sbtSuffix: String                 = "TlsJvm1"
   def enable(project: Project): Project = project.enablePlugins(TlsJvm1Plugin)
   val crossBinary: CrossVersion         = CrossVersion.binary
-  val crossFull: CrossVersion           = CrossVersion.full
+  val crossFull: CrossVersion           = CrossVersion.patch
 }
 
 trait TlsJvm1CrossProject {

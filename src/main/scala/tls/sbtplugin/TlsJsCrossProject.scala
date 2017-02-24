@@ -12,7 +12,7 @@ case object TlsJsPlatform extends Platform {
   def sbtSuffix: String                 = "TlsJs"
   def enable(project: Project): Project = project.enablePlugins(TlsJsPlugin)
   val crossBinary: CrossVersion         = CrossVersion.binary
-  val crossFull: CrossVersion           = CrossVersion.full
+  val crossFull: CrossVersion           = CrossVersion.patch
 }
 
 trait TlsJsCrossProject {
