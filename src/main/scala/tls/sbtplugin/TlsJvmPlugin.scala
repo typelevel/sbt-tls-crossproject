@@ -1,7 +1,7 @@
 package tls
 package sbtplugin
 
-import sbtcross.CrossPlugin.autoImport._
+import sbtcrossproject.CrossPlugin.autoImport._
 import sbt._
 
 object TlsJvmPlugin extends AutoPlugin {

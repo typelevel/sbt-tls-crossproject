@@ -4,7 +4,7 @@ package sbtplugin
 import org.scalajs.sbtplugin.ScalaJSPlugin
 //import org.scalajs.sbtplugin.impl.ScalaJSGroupID
 
-import sbtcross.CrossPlugin.autoImport._
+import sbtcrossproject.CrossPlugin.autoImport._
 import sbt._
 
 object TlsJsPlugin extends AutoPlugin {

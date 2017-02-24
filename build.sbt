@@ -10,10 +10,8 @@ sbtPlugin    := true
 scalacOptions ++= scalacAllOptions
 updateOptions := updateOptions.value.withCachedResolution(true)
 
-resolvers += Resolver.sonatypeRepo("snapshots")
-
-addSbtPlugin("org.scala-native" % "sbt-cross" % "0.1.0-SNAPSHOT")
-addSbtPlugin("org.scala-js"     % "sbt-scalajs"           % "0.6.14")
+addSbtPlugin("org.scala-native" % "sbt-crossproject" % "0.1.0")
+addSbtPlugin("org.scala-js"     % "sbt-scalajs"      % "0.6.14")
 
 publishMavenStyle := false
 

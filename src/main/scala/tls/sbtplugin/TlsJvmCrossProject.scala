@@ -2,7 +2,7 @@ package tls
 package sbtplugin
 
 import sbt._
-import sbtcross._
+import sbtcrossproject._
 
 import scala.language.implicitConversions
 
