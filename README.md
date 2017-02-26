@@ -8,6 +8,7 @@ The current maintainers (people who can merge pull requests) are:
 
  * [BennyHill](https://github.com/BennyHill) Alistair Johnson
  * [ShaneDelmore](https://github.com/ShaneDelmore) Shane Delmore
+ * [ChristopherDavenport](https://github.com/ChristopherDavenport) Chris Davenport
   
 ## Participation
 
